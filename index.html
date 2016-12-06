@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		body,html{
+			background-color:white;
+		}
+		div{
+			position:absolute;
+			top:0;
+			bottom:0;
+		}
+		#video1{
+			z-index:1;
+		}
+
+		
+		.text {
+			position:relative;
+			
+			top:0px;
+			bottom:0px;
+			vertical-align:middle;
+			text-align:center;
+			z-index:-1;
+			color:black;
+
+		}
+
+		h1{
+			font-size:40px;
+			
+			font-family:ariel;
+
+		}
+		h2{
+			line-height:0px;
+			font-size:150px;
+			font-family:ariel;
+		
+		}
+		h3{
+			line-height:0px;
+			font-family:cursive;
+			font-family:cursive;
+		 
+		}
+		.button{
+			display: inline-block;
+  			border-radius: 4px;
+  			background-color: rgb(244,244,244);
+  			border: none;
+  			color: gray;
+  			text-align: center;
+  			font-size: 20px;
+  			padding: 0px;
+  			width: 200px;
+  			transition: all 0.5s;
+  			cursor: pointer;
+  			margin: 0px;
+  			font-family:ariel;
+		}
+
+		.button span {
+  			cursor: pointer;
+  			display: inline-block;
+  			position: relative;
+  			transition: 0.5s;
+		}
+
+		.button span:after {
+  			content: '»';
+  			position: absolute;
+  			opacity: 0;
+  			top: 0;
+  			right: -20px;
+  			transition: 0.5s;
+		}
+
+		.button:hover span {
+  			padding-right: 25px;
+		}
+
+		.button:hover span:after {
+  			opacity: 1;
+  			right: 0;
+		}
+
+		
+
+		</style>
+		
+
+
+	</head>
+	<body>
+<!-- 		<video width="100%" id="video1" type="text/javascript" autoplay>
+			<source src="antfinal.mov">
+		</video> -->
+		<div>
+		<video id="video1" style="width:100%" autoplay>
+			<source src="images/Main Animation comp_5.mp4">
+		</video>
+		</div>
+		
+		<div class="text" id="txt">
+			<h1>The Wonderful World of </h1>
+			<h2>ANTS</h2>
+			<h3>By: Will Campbell and Carl Segerstrom</h3>
+			<form action="ants.html">
+			<button class= "button" style="vertical-align:middle"><span>enter site</span></button>
+
+		
+
+</div>
+		<script type="text/javascript">
+    		var vid=document.getElementById('video1');
+    		var txt=document.getElementById('txt');
+    		vid.addEventListener("ended", hideVideo, false);
+
+    		function hideVideo() {
+        		var vid=document.getElementById('video1');
+        		vid.removeEventListener("ended", hideVideo, false);
+        		txt.style.zIndex='1';
+    }
+  
+</script>
+	</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
