@@ -123,6 +123,18 @@
         		vid.removeEventListener("ended", hideVideo, false);
         		txt.style.zIndex='1';
     }
+			var check = false;
+window.mobilecheck = function() {
+    // Check for mobile here
+    if (check === true) {
+        // Device is mobile
+        var videos = document.querySelectorAll('.video-js');
+        for (var i = 0; i < videos.length; i++) {
+            // videojs(videos[i]).destroy();
+            videos[i].parentNode.removeChild(videos[i]);
+        }
+    }
+}
   
 </script>
 	</body>
