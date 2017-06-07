@@ -1,32 +1,51 @@
-#wrapper {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	font-family: garamond;
+body{
+	margin:18px;
+}
+#wrapper1{
+	width:100%;
+	/*margin: 0 auto;*/
+	font-family: 'Roboto Condensed', sans-serif;
+}
+#left{
+	float:left;
+	width:50%;
 }
 
-.col {
-	width: 50%;
-	float: left;
-	margin: 0;
+#right{
+	float:right;
+	width:50%;
+	text-align:right;
 }
-
+#left2{
+	float:right;
+	width:50%;
+	
+}
+#right2{
+	float:left;
+	width:50%;
+	text-align:left;
+}
 .title {
 	text-align: center;
 	color: white;
+	/*border:solid;*/
+	width:100%;
+	margin:auto;
+	border-width:2px;
+	background-color:black;
+
+
 }
 
 .title p {
-	margin: 0;
-}
 
-.story1 p{
-	color: white;
-	padding-left: 30px;
-	padding-right: 30px;
-	font-size: 16px;
-	margin:18px;
-}
+	margin: 0px ;
+	font-family: 'Barrio', cursive;
+		}
+
+
+
 .btn{
 	font-size:40px;
 	margin: 0 auto;
@@ -38,7 +57,44 @@
 	margin: 0;
 	text-align: center;
 	font-size: 16px;
-	color: white;
+	color: black;
 	font-family: garamond;
 	font-style: italic;
+}
+.star {
+    visibility: hidden;
+    width:90%;
+}
+
+.fadeIn {
+    -webkit-animation: animat_show 0.8s;
+    animation: animat_show 0.8s;
+    visibility: visible !important;
+}
+
+@-webkit-keyframes animat_show{
+    0%{opacity:0}
+    100%{opacity:1}
+}
+blockquote {
+border:none;
+font-family: 'Roboto Condensed', sans-serif;
+margin-bottom:0px;
+}
+
+blockquote h3 {
+    font-size:21px;
+}
+
+blockquote h3:before { 
+    content: open-quote;
+    font-weight: bold;
+    font-size:50px;
+    color:#889c0b;
+} 
+blockquote h3:after { 
+    content: close-quote;
+    font-weight: bold;
+    font-size:50px;
+    color:#889c0b;
 }
